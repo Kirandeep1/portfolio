@@ -5,10 +5,11 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ResponsiveDirective } from './directives/responsive.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [BanerComponent, SkillsComponent, ContactComponent, EducationComponent, PersonalInformationComponent, ProjectsComponent],
+  imports: [BanerComponent, ResponsiveDirective, SkillsComponent, ContactComponent, EducationComponent, PersonalInformationComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
