@@ -1,14 +1,26 @@
-<!-- <h3 class="font-bold text-3xl pb-3">{{title}}</h3>
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">Project Title</div>
-      <p class="text-gray-700 text-base">
-        Short description of the project.
-      </p>
+   <section id="projects" class="pt-5 pb-5 px-5 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8">{{title}}</h2>
+      <div class="space-y-6">
+        @for (project of projects; track $index) {
+          <div
+            class="bg-white p-6 shadow-lg rounded-lg"
+          >
+          <h3 class="text-2xl font-semibold mb-2">{{ project.title }} - {{ project.time_worked }}</h3>
+            <p class="text-sm text-gray-500">
+              Technologies: {{ project.technologies.join(', ') }}
+            </p>
+            <p class="text-gray-700 mt-4">{{ project.description }}</p>
+            <ul class="mt-4 text-gray-700 list-disc list-inside">
+              @for (task of project.responsibilities; track $index) {
+                <li>
+                  {{ task }}
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
     </div>
-    <div class="px-6 pt-4 pb-2">
-      <a href="#" class="text-blue-500">Live Demo</a>
-      <a href="#" class="text-blue-500 ml-4">GitHub</a>
-    </div>
-  </div>
-   -->
+  </section>
+  

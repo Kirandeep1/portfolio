@@ -1,44 +1,10 @@
-<section id="employment" class="pt-10 pb-10 px-5 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <!-- <h3 class="text-2xl font-semibold mb-4">Employment</h3> -->
-           @for (job of employment.jobs; track $index) {
-            <div class="space-y-4">
-              <div class="bg-white p-6 shadow-lg rounded-lg">
-                <h4 class="text-xl font-bold">{{ job.title }}</h4>
-                <p class="text-gray-600">{{ job.company }}</p>
-                <p class="text-sm text-gray-500">{{ job.duration }}</p>
-                <ul class="mt-2 text-gray-700 list-disc list-inside">
-                    @for (task of job.responsibilities; track $index) {
-                        <li>{{ task }}</li>
-                    }
-                </ul>
-              </div>
-            </div>
-          } 
-        </div>
-
-        <div>
-            <!-- <h3 class="text-2xl font-semibold mb-4">Internships</h3> -->
-            @for (internship of employment.internships; track $index) {
-              <div class="space-y-4">
-                  <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h4 class="text-xl font-bold">{{ internship.title }}</h4>
-                    <p class="text-gray-600">{{ internship.company }}</p>
-                    <p class="text-sm text-gray-500">{{ internship.duration }}</p>
-                    <ul class="mt-2 text-gray-700 list-disc list-inside">
-                      @for (item of internship.responsibilities; track $index) {
-                          <li>{{ item }}</li>
-                      }
-                    </ul>
-                  </div>
-                </div>
-            }
-  
-          </div>
-      </div>
+<section id="education" class="pt-5 pb-5 px-5 bg-gray-100">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Education</h2>
+    <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h3 class="text-2xl font-semibold">B.E in Information Technology</h3>
+      <p class="text-gray-600">UIET, Panjab University</p>
+      <p class="text-sm text-gray-500">2017 - 2021 | CGPA: 8.67</p>
     </div>
-  </section>
-  
+  </div>
+</section>
