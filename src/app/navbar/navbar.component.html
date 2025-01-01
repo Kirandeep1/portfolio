@@ -1,3 +1,4 @@
+<!-- add responsiveness when reduced screen size then the options can come under hamburger menu -->
 <div class="bg-gray-900/70 text-white sticky top-0 z-50 shadow-md">
   <nav class="flex justify-between items-center p-4">
     <!-- <div class="text-2xl font-bold text-gray-800">My Portfolio</div> -->
@@ -18,12 +19,12 @@
         ">Employment</a>
       </li>
       <li>
-        <a href="#education" class="hover:text-blue-500 transition duration-300" [ngClass]="{
-          'text-blue-500 font-bold': isActive('education') }">Education</a>
-      </li>
-      <li>
         <a href="#projects" class="hover:text-blue-500 transition duration-300" [ngClass]="{
           'text-blue-500 font-bold': isActive('projects') }">Projects</a>
+          <li>
+            <a href="#education" class="hover:text-blue-500 transition duration-300" [ngClass]="{
+              'text-blue-500 font-bold': isActive('education') }">Education</a>
+          </li>
     </ul>
   </nav>
 </div>

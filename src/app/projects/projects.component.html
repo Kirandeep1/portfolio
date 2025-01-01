@@ -1,4 +1,6 @@
+   <!-- can try adding 4 cards into 2 coloumns for visibility -->
    <section id="projects" class="pt-5 pb-5 px-5 bg-gray-100">
+    <!-- <hr class="h-px my-8 bg-gray-300 border-0"> -->
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-8">{{title}}</h2>
       <div class="space-y-6">
@@ -6,21 +8,38 @@
           <div
             class="bg-white p-6 shadow-lg rounded-lg"
           >
-          <h3 class="text-2xl font-semibold mb-2">{{ project.title }} - {{ project.time_worked }}</h3>
+          <div class="flex justify-between">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold flex items-center">
+                <span class="mr-2">📂</span> {{ project.title }}
+              </h3>
+              <p class="text-sm text-gray-500 ml-6">
+               {{ project.time_worked }}
+              </p>
+            </div>  
+           
+            <button
+            class="bg-blue-500 text-white px-2 rounded-lg"
+            (click)="toggleDetails($index)">
+            {{isOpen[$index] ? 'Hide Details' : 'View Details'}}
+          </button>
+          </div>
             <p class="text-sm text-gray-500">
               Technologies: {{ project.technologies.join(', ') }}
             </p>
-            <p class="text-gray-700 mt-4">{{ project.description }}</p>
-            <ul class="mt-4 text-gray-700 list-disc list-inside">
-              @for (task of project.responsibilities; track $index) {
-                <li>
-                  {{ task }}
-                </li>
+          
+              @if (isOpen[$index]) {
+                <p class="text-gray-700 mt-4">{{ project.description }}</p>
+                <ul class="mt-4 text-gray-700 list-disc list-inside">
+                  @for (task of project.responsibilities; track $index) {
+                    <li>
+                      {{ task }}
+                    </li>
+                  }
+                </ul>
               }
-            </ul>
           </div>
         }
       </div>
     </div>
   </section>
-  

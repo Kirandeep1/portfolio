@@ -1,4 +1,4 @@
-<section id="work-experience" class="pt-10 pb-10 px-5 bg-gray-100">
+<section id="work-experience" class="pt-10 pb-5 px-5 bg-gray-100">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
       <div class="grid md:grid-cols-2 gap-8">
@@ -7,9 +7,11 @@
            @for (job of employment.jobs; track $index) {
             <div class="space-y-4">
               <div class="bg-white p-6 shadow-lg rounded-lg">
-                <h4 class="text-xl font-bold">{{ job.title }}</h4>
+                <div class="flex justify-between items-center">
+                  <h4 class="text-xl font-bold">{{ job.title }}</h4>
+                  <p class="text-sm text-gray-500">{{ job.duration }}</p>
+                </div>
                 <p class="text-gray-600">{{ job.company }}</p>
-                <p class="text-sm text-gray-500">{{ job.duration }}</p>
                 <ul class="mt-2 text-gray-700 list-disc list-inside">
                     @for (task of job.responsibilities; track $index) {
                         <li>{{ task }}</li>
@@ -25,9 +27,11 @@
             @for (internship of employment.internships; track $index) {
               <div class="space-y-4">
                   <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h4 class="text-xl font-bold">{{ internship.title }}</h4>
+                    <div class="flex justify-between items-center">
+                      <h4 class="text-xl font-bold">{{ internship.title }}</h4>
+                      <p class="text-sm text-gray-500">{{ internship.duration }}</p>
+                    </div>
                     <p class="text-gray-600">{{ internship.company }}</p>
-                    <p class="text-sm text-gray-500">{{ internship.duration }}</p>
                     <ul class="mt-2 text-gray-700 list-disc list-inside">
                       @for (item of internship.responsibilities; track $index) {
                           <li>{{ item }}</li>

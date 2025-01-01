@@ -14,12 +14,13 @@ interface Project {
 })
 export class ProjectsComponent {
 title: string = "Projects";
+isOpen: boolean[] = [];
 projects: Project[] = [
   {
     title: 'Market Data on Demand Application',
     technologies: ['Angular', 'GraphQL', 'Node.js', 'Go'],
     description:
-      'A financial data application that provides end of day market data to clients on demand. Supports data requests for multiple securities via CSV or Excel import',
+      'A financial data application that provides end of day market data to clients on demand. Supports data requests for multiple securities via CSV or Excel import.',
     responsibilities: [
       'Developed the front-end using Angular from scratch; now maintained by another team.',
     ],
@@ -57,4 +58,9 @@ projects: Project[] = [
       time_worked: "10/2022-Present"
       },
 ];
+
+toggleDetails(index: number) {
+  this.isOpen[index] = !this.isOpen[index];
+}
+  
 }
