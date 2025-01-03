@@ -10,6 +10,7 @@ import { log } from 'console';
 })
 export class NavbarComponent {
   activeSection: string = '';
+  isMenuOpen: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {    

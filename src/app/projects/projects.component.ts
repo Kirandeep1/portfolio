@@ -20,9 +20,9 @@ projects: Project[] = [
     title: 'Market Data on Demand Application',
     technologies: ['Angular', 'GraphQL', 'Node.js', 'Go'],
     description:
-      'A financial data application that provides end of day market data to clients on demand. Supports data requests for multiple securities via CSV or Excel import.',
+      'A financial data application that delivers end-of- day market data to clients on demand. It supports data requests for a wide range of securities, including equities, mutual funds, bonds, and debts.',
     responsibilities: [
-      'Developed the front-end using Angular from scratch; now maintained by another team.',
+      'Started the front-end using Angular from scratch; now maintained by another team.',
     ],
     time_worked: "06/2021-03/2024"
   },
@@ -32,8 +32,8 @@ projects: Project[] = [
     description:
       'A Retool-based tool for managing gRPC services, improving coordination between operations and development teams.',
     responsibilities: [
-      'Built and maintaining the tool independently.',
-      'Integrated back-end services and collaborated with operations for requirements.',
+      'Developed and currently adding features continuously to the tool.',
+      'Integrated back-end services and collaborated with operations team to gather and implement requirements effectively.',
     ],
     time_worked: "08/2024-Present"
   },
