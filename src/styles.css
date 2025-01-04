@@ -25,3 +25,9 @@ html {
     margin: 0 auto;
     outline: 0px solid white;
 }
+.common-gradient {
+    background: white;
+    /* background: linear-gradient(135deg, #f8fafc, #e0f7fa) !important; */
+    /* background: linear-gradient(135deg, #ffffff, #dce3f8); */
+    /* background: linear-gradient(135deg, #e0f7fa, #ffffff); */
+}

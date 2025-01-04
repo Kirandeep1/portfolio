@@ -1,1 +1,18 @@
-<p>skills works!</p>
+<section id="skills" class="pt-5 pb-5 px-40 bg-gray-100 common-gradient">
+    <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+<div class="container">
+        <div class="bg-white p-4 shadow rounded">
+           
+            @for (skill of skillSet; track $index) {
+                <div class="text-lg font-medium mt-2">{{skill.name}}</div>
+                <div class="bg-gray-200 rounded-full h-3 mt-2">
+                    <!-- <div class="bg-blue-500 h-3 rounded-full" [style.width.%]='skill.percent'
+                    ></div> -->
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" [style.width.%]='skill.percent'
+                    ></div>
+                  </div>
+            }
+                </div>
+                </div>
+</section>
+

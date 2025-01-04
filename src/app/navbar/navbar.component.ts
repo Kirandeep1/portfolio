@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { log } from 'console';
 
 @Component({
   selector: 'app-navbar',
