@@ -22,9 +22,9 @@ projects: Project[] = [
     description:
       'A financial data application that delivers end-of- day market data to clients on demand. It supports data requests for a wide range of securities, including equities, mutual funds, bonds, and debts.',
     responsibilities: [
-      'Started the front-end using Angular from scratch; now maintained by another team.',
+      'Developed the application from scratch in Angular, collaborating with UI/UX designers.',
     ],
-    time_worked: "06/2021-03/2024"
+    time_worked: "06/2021-Present"
   },
   {
     title: 'gRPC Service Management Tool',
@@ -55,7 +55,7 @@ projects: Project[] = [
       responsibilities: [
         'Involved in the maintenance and bug fixes of the app.',
       ],
-      time_worked: "10/2022-Present"
+      time_worked: "10/2022-04/2024"
       },
 ];
 

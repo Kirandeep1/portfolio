@@ -23,9 +23,12 @@
             {{isOpen[$index] ? 'Hide Details' : 'View Details'}}
           </button>
           </div>
-            <p class="text-sm text-gray-500">
-              Technologies: {{ project.technologies.join(', ') }}
-            </p>
+              <div class="text-sm flex">
+                <p class="text-gray-700">Technologies:</p>
+                <span class="text-gray-500 ml-2">
+                  {{ project.technologies.join(', ') }}
+                  </span>
+              </div>
           
               @if (isOpen[$index]) {
                 <p class="text-gray-700 mt-4">{{ project.description }}</p>
