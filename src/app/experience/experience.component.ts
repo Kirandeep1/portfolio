@@ -14,10 +14,10 @@ export class ExperienceComponent {
         company: 'Zversal Pvt. Ltd.',
         duration: 'Jan 2021 - Jun 2021',
         responsibilities: [
-          'Enhanced an in-house Angular project by consistently updating functionalities according to requirements.',
-          'Learned Git, GitHub, and markdown language, and wrote README files for the projects.',
-          'Utilized APIs and Postman to fetch and display data on websites.',
-          'Had the opportunity to start a new project from scratch.'
+          'Had the opportunity to start an in-house project "Market Data on Demand" from scratch with the collaboration of UI/UX designers.',
+          'Enhancements done in the in-house project "Vendor Management Project"',
+          'Utilized APIs and Postman to fetch and display data on the UI.',
+          'Learned Git, GitHub, markdown language, and wrote README files for projects.'
         ],
       },
     ],
@@ -27,13 +27,14 @@ export class ExperienceComponent {
         company: 'Zversal Pvt. Ltd.',
         duration: 'Jun 2021 - Present',
         responsibilities: [
-          'Working on Retool, a low-code platform to build internal tools helping the QA and business teams to automate their tasks.',
           'Maintaining various in-house Angular projects, consistently updating functionalities to meet evolving requirements.',
-          'Worked on a project to build a website from scratch.',
-          'Migrated a project from Angular 7 to Angular 13.',
-          'Replaced Bootstrap & plain CSS with Tailwind CSS in projects.',
-          'Enhanced functionalities within legacy Angular JS 1.x project.',
-          'Integrated Mixpanel analytics in a project to track user interactions.',
+          'Migrated project from Angular v7 to v13 to ensure future compatibility.',
+          'Replaced Bootstrap & plain CSS with TailwindCSS in two existing in-house projects.',
+          'Enhanced functionalities within a legacy AngularJS 1.x project.',
+          'Integrated Mixpanel analytics in assigned projects to analyze user interactions to improve app usability.',
+          'Wrote unit test cases with Karma and Jasmine.',
+          'Improved code-quality by integrating enhancement tools - ESLint, Prettier & Husky in applications',
+          'Working on Retool, a low-code platform to build internal tools helping the QA and business teams to automate their tasks.',
           'Familarized with SQL, docker and AWS services.'
         ],
       },

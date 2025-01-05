@@ -1,12 +1,11 @@
-<section id="work-experience" class="pt-10 pb-5 px-40 bg-gray-100 common-gradient">
+<!-- <section id="work-experience" class="pt-10 pb-5 px-40 bg-gray-100 common-gradient">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <!-- <h3 class="text-2xl font-semibold mb-4">Employment</h3> -->
            @for (job of employment.jobs; track $index) {
             <div class="space-y-4">
-              <div class="bg-white p-6 shadow-lg rounded-lg">
+              <div class="bg-white p-6 shadow rounded-lg">
                 <div class="flex justify-between items-center">
                   <h4 class="text-xl font-bold">{{ job.title }}</h4>
                   <p class="text-sm text-gray-500">{{ job.duration }}</p>
@@ -23,10 +22,10 @@
         </div>
 
         <div>
-            <!-- <h3 class="text-2xl font-semibold mb-4">Internships</h3> -->
+
             @for (internship of employment.internships; track $index) {
               <div class="space-y-4">
-                  <div class="bg-white p-6 shadow-lg rounded-lg">
+                  <div class="bg-white p-6 shadow rounded-lg">
                     <div class="flex justify-between items-center">
                       <h4 class="text-xl font-bold">{{ internship.title }}</h4>
                       <p class="text-sm text-gray-500">{{ internship.duration }}</p>
@@ -42,6 +41,50 @@
             }
   
           </div>
+      </div>
+    </div>
+  </section>
+   -->
+
+   <section id="work-experience" class="pt-10 pb-5 px-8 md:px-40 bg-gray-100 common-gradient">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Work Experience</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Employment -->
+        <div>
+          @for (job of employment.jobs; track $index) {
+            <div class="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h4 class="text-xl font-semibold text-gray-800">{{ job.title }}</h4>
+                <p class="text-sm text-gray-600 italic">{{ job.duration }}</p>
+              </div>
+              <p class="text-gray-700 font-medium">{{ job.company }}</p>
+              <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+                @for (task of job.responsibilities; track $index) {
+                  <li class="leading-relaxed">{{ task }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+  
+        <!-- Internships -->
+        <div>
+          @for (internship of employment.internships; track $index) {
+            <div class="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div class="flex justify-between items-center mb-2">
+                <h4 class="text-xl font-semibold text-gray-800">{{ internship.title }}</h4>
+                <p class="text-sm text-gray-600 italic">{{ internship.duration }}</p>
+              </div>
+              <p class="text-gray-700 font-medium">{{ internship.company }}</p>
+              <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+                @for (item of internship.responsibilities; track $index) {
+                  <li class="leading-relaxed">{{ item }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
       </div>
     </div>
   </section>

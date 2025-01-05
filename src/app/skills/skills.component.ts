@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
@@ -40,6 +41,18 @@ export class SkillsComponent {
       name: "REST",
       percent: 60
     },
+    // {
+    //   name: "Retool",
+    //   percent: 90
+    // },
+    {
+      name: "Node.js",
+      percent: 50
+    },
+    {
+      name: "SQL",
+      percent: 50
+    },
     {
       name: "GIT",
       percent: 70
@@ -48,9 +61,5 @@ export class SkillsComponent {
       name: "Github",
       percent: 80
     },
-    {
-      name: "Retool",
-      percent: 90
-    }
   ]
 }

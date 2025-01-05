@@ -1,4 +1,4 @@
-<section id="skills" class="pt-5 pb-5 px-40 bg-gray-100 common-gradient">
+<!-- <section id="skills" class="pt-5 pb-5 px-40 bg-gray-100 common-gradient">
     <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
 <div class="container">
         <div class="bg-white p-4 shadow rounded">
@@ -6,13 +6,44 @@
             @for (skill of skillSet; track $index) {
                 <div class="text-lg font-medium mt-2">{{skill.name}}</div>
                 <div class="bg-gray-200 rounded-full h-3 mt-2">
-                    <!-- <div class="bg-blue-500 h-3 rounded-full" [style.width.%]='skill.percent'
-                    ></div> -->
                     <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" [style.width.%]='skill.percent'
                     ></div>
                   </div>
             }
                 </div>
                 </div>
+</section> -->
+
+<section id="skills" class="pt-5 pb-5 px-40 bg-gray-100 common-gradient">
+    <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+    <div class="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        @for (skill of skillSet; track $index) {
+            <div class="flex flex-col items-center bg-white p-4 shadow rounded">
+                <div
+                    class="relative bg-gray-200 h-40 w-10 rounded-full overflow-hidden flex items-end justify-center"
+                >
+                    <div
+                        [ngStyle]="{
+                            height: skill.percent + '%',
+                            background:
+                                skill.percent >= 90
+                                    ? 'linear-gradient(to top, #34d399, #059669)'
+                                    : skill.percent >= 75
+                                    ? 'linear-gradient(to top, #3b82f6, #2563eb)'
+                                    : skill.percent >= 60
+                                    ? 'linear-gradient(to top, #f59e0b, #d97706)'
+                                    : 'linear-gradient(to top, #f87171, #e11d48)'
+                        }"
+                        class="w-full rounded-full"
+                    ></div>
+                </div>
+                <div class="mt-2 text-center">
+                    <span class="text-lg font-medium">{{ skill.name }}</span>
+                    <!-- <div class="text-sm text-gray-500">{{ skill.percent }}%</div> -->
+                </div>
+            </div>
+        }
+    </div>
 </section>
+
 
