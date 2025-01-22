@@ -16,7 +16,7 @@
 
 <section id="skills" class="pt-5 pb-5 px-40 bg-gray-100 common-gradient">
     <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-    <div class="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    <div class="container grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-4 justify-items-start">
         @for (skill of skillSet; track $index) {
             <div class="flex flex-col items-center bg-white p-4 shadow rounded">
                 <div
@@ -38,8 +38,7 @@
                     ></div>
                 </div>
                 <div class="mt-2 text-center">
-                    <span class="text-lg font-medium">{{ skill.name }}</span>
-                    <!-- <div class="text-sm text-gray-500">{{ skill.percent }}%</div> -->
+                    <span class="text-lg font-medium break-words">{{ skill.name }}</span>
                 </div>
             </div>
         }
@@ -47,3 +46,4 @@
 </section>
 
 
+ 
