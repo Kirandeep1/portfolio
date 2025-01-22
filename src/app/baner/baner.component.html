@@ -2,10 +2,27 @@
     <div class="max-w-3xl px-5">
       <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Kirandeep Kaur</h1>
       <p class="text-3xl mb-4">Software Developer</p>
-      <div>
+      <!-- <div>
         <a href="mailto:kiran.kaur1099@gmail.com" class="mr-5 text-white underline hover:text-blue-500">kiran.kaur1099&#64;gmail.com</a>
         <span> <a href="https://www.linkedin.com/in/kiran1308/" class="text-white underline hover:text-blue-500" target="_blank" aria-label="LinkedIn">https://www.linkedin.com/in/kiran1308/</a></span>
+      </div> -->
+      <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0">
+        <a 
+          href="mailto:kiran.kaur1099@gmail.com" 
+          class="mr-0 md:mr-5 text-white underline hover:text-blue-500"
+        >
+          kiran.kaur1099&#64;gmail.com
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/kiran1308/" 
+          class="text-white underline hover:text-blue-500" 
+          target="_blank" 
+          aria-label="LinkedIn"
+        >
+          https://www.linkedin.com/in/kiran1308/
+        </a>
       </div>
+      
       <div class="flex justify-center gap-5 mt-5">
         <button class="px-6 py-3 text-base font-bold bg-[#008db3] hover:bg-blue-700 text-white border-none rounded-md cursor-pointer transition-transform hover:scale-105 shadow-lg" (click)="scrollToProjects()">View My Work</button>
         <button class="px-6 py-3 text-base font-bold bg-[#008db3]  hover:bg-blue-700 text-white border-none rounded-md cursor-pointer transition-transform hover:scale-105 shadow-lg" (click)="downloadResume()">Download Resume</button>
