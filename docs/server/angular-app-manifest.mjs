@@ -9,10 +9,10 @@ export default {
   }
 ],
   assets: new Map([
-['index.csr.html', {size: 16389, hash: '4c1b041a08c6f40104ba2ad502199a07165f168ec326386bd8dab5cfdd791095', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)}], 
-['index.server.html', {size: 15003, hash: 'e0760e033d3b14b57d9b7f1d88b6321ff179a1bd071078234ab684e04dfb1f75', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)}], 
-['index.html', {size: 39568, hash: '41b6b7869633057fa2d68a755f5ac3dc5a6e9d26ad2133ffcdc2f46d8fe14673', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)}], 
-['styles-5I3Y2AQJ.css', {size: 12936, hash: '1WIcWr+2MFw', text: () => import('./assets-chunks/styles-5I3Y2AQJ_css.mjs').then(m => m.default)}]
+['index.csr.html', {size: 16581, hash: '531db93ac6993ae3b93d928bc95f8b32eee28e1ac1a8cdcd7118ef495b78ee4d', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)}], 
+['index.server.html', {size: 15196, hash: 'c797b4e0960b05935f9fa40ea938622126d0259992e551f4d8eff9cc127bb90c', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)}], 
+['index.html', {size: 42378, hash: '281d8ba3374a22ff61051bffad25ffae4edba68eb3c7edc0b6f401b1822abf1c', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)}], 
+['styles-2SLQJJXX.css', {size: 15782, hash: 'IMCDvgWXslc', text: () => import('./assets-chunks/styles-2SLQJJXX_css.mjs').then(m => m.default)}]
 ]),
   locale: undefined,
 };
