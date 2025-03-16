@@ -12,7 +12,7 @@ export class BanerComponent {
     projectsSection?.scrollIntoView({ behavior: 'smooth' });
   }
   downloadResume(): void {
-    const resumeUrl = '/Kirandeep_Kaur_Resume.pdf'; // Replace with your resume's actual path
+    const resumeUrl = 'Kirandeep_Kaur_Resume.pdf'; // Replace with your resume's actual path
     const link = this.element.nativeElement.ownerDocument.createElement('a');
     link.href = resumeUrl;
     link.download = 'Kirandeep_Kaur_Resume.pdf';
