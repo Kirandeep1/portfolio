@@ -7,37 +7,31 @@ import { Component } from '@angular/core';
   styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
-  employment = {
-    internships: [
-      {
-        title: 'Angular Developer Intern',
-        company: 'Zversal Pvt. Ltd.',
-        duration: 'Jan 2021 - Jun 2021',
-        responsibilities: [
-          'Had the opportunity to start an in-house project "Market Data on Demand" from scratch with the collaboration of UI/UX designers.',
-          'Enhancements done in the in-house project "Vendor Management Project"',
-          'Utilized APIs and Postman to fetch and display data on the UI.',
-          'Learned Git, GitHub, markdown language, and wrote README files for projects.'
-        ],
-      },
-    ],
-    jobs: [
-      {
-        title: 'Software Developer',
-        company: 'Zversal Pvt. Ltd.',
-        duration: 'Jun 2021 - Present',
-        responsibilities: [
-          'Maintaining various in-house Angular projects, consistently updating functionalities to meet evolving requirements.',
-          'Migrated project from Angular v7 to v13 to ensure future compatibility.',
-          'Replaced Bootstrap & plain CSS with TailwindCSS in two existing in-house projects.',
-          'Enhanced functionalities within a legacy AngularJS 1.x project.',
-          'Integrated Mixpanel analytics in assigned projects to analyze user interactions to improve app usability.',
-          'Wrote unit test cases with Karma and Jasmine.',
-          'Improved code-quality by integrating enhancement tools - ESLint, Prettier & Husky in applications',
-          'Working on Retool, a low-code platform to build internal tools helping the QA and business teams to automate their tasks.',
-          'Familarized with SQL, docker and AWS services.'
-        ],
-      },
-    ],
-  };
+  roles = [
+    {
+      title: 'Senior Frontend Developer',
+      company: 'Zversal Private Limited',
+      duration: 'Jun 2021 - Present',
+      responsibilities: [
+        'Build and maintain Angular applications in the financial data domain, focusing on performance, scalability, and user experience.',
+        'Led framework upgrades across applications, including migration from Angular v7 to v13 and subsequent version updates.',
+        'Developed and enhanced internal business applications using Retool, streamlining QA, operational, and business workflows.',
+        'Built analytics dashboards using Apache Superset, and leveraged Mixpanel and Datadog to monitor product usage and application health.',
+        'Modernized frontend architecture by adopting TailwindCSS and implementing code quality practices with ESLint, Prettier, Karma, and Jasmine.',
+        'Contributed to deployment workflows through GitHub Actions and CI/CD, and adopted AI-assisted development tools.',
+        'Collaborated closely with business stakeholders, designers, and engineering teams to deliver practical solutions.',
+      ],
+    },
+    {
+      title: 'Angular Developer Intern',
+      company: 'Zversal Private Limited',
+      duration: 'Jan 2021 - Jun 2021',
+      responsibilities: [
+        'Contributed to building "Market Data on Demand" from scratch in collaboration with UI/UX and backend teams.',
+        'Worked on feature enhancements and bug fixes for the existing Vendor Management Project.',
+        'Integrated REST APIs and tested endpoints using Postman.',
+        'Maintained technical documentation using Markdown and version control with Git and GitHub.',
+      ],
+    },
+  ];
 }

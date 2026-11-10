@@ -11,8 +11,17 @@ export class NavbarComponent {
   activeSection: string = '';
   isMenuOpen: boolean = false;
 
+  links = [
+    { id: 'about-me', label: 'About' },
+    { id: 'work-experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'education', label: 'Education' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   @HostListener('window:scroll', [])
-  onWindowScroll() {    
+  onWindowScroll() {
     const sections = document.querySelectorAll('section[id]');
     let currentSection = '';
 

@@ -1,9 +1,28 @@
-<section id="about-me">
-    <div class="text-white bg-[#0a2540] pt-10 pb-10 px-40">
-        <h3 class="font-bold text-3xl pb-3 text-center">{{title}}</h3>
-        @for (item of description; track $index) {
-            <p class="pb-3">{{item}}</p>
-        }
+<section id="about-me" class="bg-white section-y section-x">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900">{{ title }}</h2>
+      <div class="w-16 h-1 bg-brand rounded-full mx-auto mt-3"></div>
     </div>
-</section>
 
+    <div class="grid md:grid-cols-3 gap-10 items-start">
+      <div class="md:col-span-2 space-y-4">
+        @for (item of description; track $index) {
+          <p class="text-slate-600 leading-relaxed">{{ item }}</p>
+        }
+      </div>
+
+      <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 space-y-4">
+        @for (fact of quickFacts; track fact.label) {
+          <div class="flex items-start gap-3">
+            <i class="{{ fact.icon }} text-brand mt-1 w-4"></i>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-400 font-semibold">{{ fact.label }}</p>
+              <p class="text-slate-800 font-medium">{{ fact.value }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
