@@ -1,51 +1,46 @@
-   <!-- can try adding 4 cards into 2 coloumns for visibility -->
-   <section id="projects" class="pt-5 pb-5 md:px-40 bg-gray-100 common-gradient">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">{{title}}</h2>
-      <div class="space-y-6">
-        @for (project of projects; track $index) {
-          <div
-            class="bg-white p-6 shadow rounded-lg"
-          >
-          <div class="flex justify-between">
-            <div class="flex justify-between items-center">
-              <h3 class="text-xl font-semibold flex items-center">
-                <span class="mr-2">📂</span> {{ project.title }}
-              </h3>
-              <p class="text-sm text-gray-500 ml-6">
-               {{ project.time_worked }}
-              </p>
-            </div>  
-           
-            <button
-            class="bg-blue-500 text-white px-2 rounded-lg"
-            (click)="toggleDetails($index)">
-            {{isOpen[$index] ? 'Hide Details' : 'View Details'}}
-          </button>
-          </div>
-              <div class="text-sm flex">
-                <p class="text-gray-700">Technologies:</p>
-                <span class="text-gray-500 ml-2">
-                  {{ project.technologies.join(', ') }}
-                  </span>
-              </div>
-          
-              @if (isOpen[$index]) {
-                <p class="text-gray-700 mt-4">{{ project.description }}</p>
-                <ul class="mt-4 text-gray-700 list-disc list-inside">
-                  @for (task of project.responsibilities; track $index) {
-                    <li>
-                      {{ task }}
-                    </li>
-                  }
-                </ul>
-              }
-          </div>
-        }
-      </div>
+<section id="projects" class="bg-white section-y section-x">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900">{{ title }}</h2>
+      <div class="w-16 h-1 bg-brand rounded-full mx-auto mt-3"></div>
     </div>
-  </section>
 
+    <div class="grid md:grid-cols-2 gap-6">
+      @for (project of projects; track project.title) {
+        <div class="bg-slate-50 border border-slate-100 p-6 rounded-xl hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
+          <div class="flex justify-between items-start gap-3 mb-2">
+            <h3 class="text-lg font-semibold text-slate-900">{{ project.title }}</h3>
+            <span class="shrink-0 text-xs font-medium text-brand-dark bg-brand/10 rounded-full px-3 py-1">{{ project.time_worked }}</span>
+          </div>
 
+          <div class="flex flex-wrap gap-2 mb-4">
+            @for (tech of project.technologies; track tech) {
+              <span class="text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-full px-3 py-1">{{ tech }}</span>
+            }
+          </div>
 
- 
+          <p class="text-slate-600 leading-relaxed mb-4">{{ project.description }}</p>
+
+          @if (isOpen[$index]) {
+            <ul class="space-y-2 mb-2">
+              @for (task of project.responsibilities; track $index) {
+                <li class="flex gap-2 text-slate-600 leading-relaxed">
+                  <i class="fas fa-check text-brand text-xs mt-1.5"></i>
+                  <span>{{ task }}</span>
+                </li>
+              }
+            </ul>
+          }
+
+          <button
+            class="mt-auto self-start inline-flex items-center gap-1.5 text-sm font-semibold text-brand-dark hover:text-brand transition-colors"
+            (click)="toggleDetails($index)"
+          >
+            {{ isOpen[$index] ? 'Hide Details' : 'View Details' }}
+            <i class="fas text-xs" [class.fa-chevron-up]="isOpen[$index]" [class.fa-chevron-down]="!isOpen[$index]"></i>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</section>

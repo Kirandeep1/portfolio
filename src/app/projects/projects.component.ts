@@ -17,45 +17,47 @@ title: string = "Projects";
 isOpen: boolean[] = [];
 projects: Project[] = [
   {
-    title: 'Market Data on Demand Application',
+    title: 'Market Data on Demand',
     technologies: ['Angular', 'GraphQL', 'Node.js', 'Go'],
     description:
-      'A financial data application that delivers end-of- day market data to clients on demand. It supports data requests for a wide range of securities, including equities, mutual funds, bonds, and debts.',
+      'A financial data platform delivering end-of-day market data to users and exchanges, covering equities, mutual funds, bonds, and debts.',
     responsibilities: [
-      'Developed the application from scratch in Angular, collaborating with UI/UX designers.',
+      'Initiated the project from scratch with a focus on scalable, modular Angular architecture, in close collaboration with UI/UX and backend teams.',
+      'Continued maintaining and enhancing the application post-launch, adapting to evolving business requirements.',
     ],
-    time_worked: "06/2021-Present"
+    time_worked: "Jun 2021 - Present"
   },
   {
     title: 'gRPC Service Management Tool',
     technologies: ['Retool', 'gRPC'],
     description:
-      'A Retool-based tool for managing gRPC services, improving coordination between operations and development teams.',
+      'An internal tool built on Retool to streamline gRPC service requests across QA and operations teams.',
     responsibilities: [
-      'Developed and currently adding features continuously to the tool.',
-      'Integrated back-end services and collaborated with operations team to gather and implement requirements effectively.',
+      'Improved cross-team coordination and significantly reduced manual effort in managing service requests.',
+      'Integrated back-end services and collaborated with the operations team to gather and implement requirements.',
     ],
-    time_worked: "08/2024-Present"
+    time_worked: "Aug 2024 - Present"
   },
   {
     title: 'Vendor Management System',
-    technologies: ['Angular', 'Java'],
+    technologies: ['Angular', 'Java', 'SQL'],
     description:
-      'Manages vendor and client data distribution for financial products, focusing on authentication and authorization.',
+      'A vendor and client data distribution system managing user access to financial products between users and exchanges.',
     responsibilities: [
-      'Responsible for the enhancements and bug fixes of the app.',
+      'Contributed to feature enhancements, UI improvements, and bug fixes.',
+      'Maintained application compatibility through multiple Angular version upgrades over time.',
     ],
-    time_worked: "01/2021-Present"
+    time_worked: "Jan 2021 - Present"
     },
     {
       title: 'Agreement App',
       technologies: ['AngularJS 1.x', 'Java'],
       description:
-        'Allows clients to sign agreements online for exchange data access, enabling product authorization.',
+        'A client-facing application enabling users to fill out and submit agreements and receive authorization updates from exchanges.',
       responsibilities: [
-        'Involved in the maintenance and bug fixes of the app.',
+        'Delivered enhancements and bug fixes on a legacy AngularJS 1.x codebase while ensuring continued stability.',
       ],
-      time_worked: "10/2022-04/2024"
+      time_worked: "Oct 2022 - Apr 2024"
       },
 ];
 

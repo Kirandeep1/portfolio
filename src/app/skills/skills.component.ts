@@ -8,58 +8,42 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-  skillSet = [  
+  skillGroups = [
     {
-    name: 'Angular',
-    percent: 75
+      category: 'Frontend',
+      items: ['Angular (v2+)', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'RxJS'],
     },
     {
-      name: 'Javascript',
-      percent: 80
+      category: 'Styling',
+      items: ['TailwindCSS', 'Bootstrap'],
     },
     {
-      name: 'Typescript',
-      percent: 70
+      category: 'Backend & Data',
+      items: ['SQL (MySQL)', 'REST APIs', 'Node.js'],
     },
     {
-      name: 'HTML',
-      percent: 90
+      category: 'Tools',
+      items: ['Git', 'GitHub', 'Docker', 'Postman', 'Retool (Low Code)'],
     },
     {
-      name: 'CSS',
-      percent:80
+      category: 'Testing',
+      items: ['Karma', 'Jasmine'],
     },
     {
-      name: 'Bootstrap',
-      percent: 70
+      category: 'Analytics',
+      items: ['Apache Superset', 'Mixpanel', 'Datadog'],
     },
     {
-      name: 'TailwindCSS',
-      percent: 70
+      category: 'Cloud & DevOps',
+      items: ['AWS Services', 'GitHub Actions', 'CI/CD'],
     },
     {
-      name: "REST",
-      percent: 60
-    },
-    // {
-    //   name: "Retool",
-    //   percent: 90
-    // },
-    {
-      name: "Node.js",
-      percent: 50
+      category: 'Familiar With',
+      items: ['React', 'Go', 'GraphQL', 'gRPC'],
     },
     {
-      name: "SQL",
-      percent: 50
+      category: 'Soft Skills',
+      items: ['Mentoring', 'Team Collaboration', 'Documentation', 'Problem Solving'],
     },
-    {
-      name: "GIT",
-      percent: 70
-    },
-    {
-      name: "Github",
-      percent: 80
-    },
-  ]
+  ];
 }

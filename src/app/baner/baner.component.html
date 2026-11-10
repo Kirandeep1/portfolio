@@ -1,32 +1,54 @@
-<div class="h-screen flex justify-center items-center text-white text-center bg-cover bg-center" style="background-image: url('portfolio-background.jpg')">
-    <div class="max-w-3xl px-5">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Kirandeep Kaur</h1>
-      <p class="text-3xl mb-4">Software Developer</p>
-      <!-- <div>
-        <a href="mailto:kiran.kaur1099@gmail.com" class="mr-5 text-white underline hover:text-blue-500">kiran.kaur1099&#64;gmail.com</a>
-        <span> <a href="https://www.linkedin.com/in/kiran1308/" class="text-white underline hover:text-blue-500" target="_blank" aria-label="LinkedIn">https://www.linkedin.com/in/kiran1308/</a></span>
-      </div> -->
-      <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0">
-        <a 
-          href="mailto:kiran.kaur1099@gmail.com" 
-          class="mr-0 md:mr-5 text-white underline hover:text-blue-500"
-        >
-          kiran.kaur1099&#64;gmail.com
-        </a>
-        <a 
-          href="https://www.linkedin.com/in/kiran1308/" 
-          class="text-white underline hover:text-blue-500" 
-          target="_blank" 
-          aria-label="LinkedIn"
-        >
-          https://www.linkedin.com/in/kiran1308/
-        </a>
-      </div>
-      
-      <div class="flex justify-center gap-5 mt-5">
-        <button class="px-6 py-3 text-base font-bold bg-[#008db3] hover:bg-blue-700 text-white border-none rounded-md cursor-pointer transition-transform hover:scale-105 shadow-lg" (click)="scrollToProjects()">View My Work</button>
-        <button class="px-6 py-3 text-base font-bold bg-[#008db3]  hover:bg-blue-700 text-white border-none rounded-md cursor-pointer transition-transform hover:scale-105 shadow-lg" (click)="downloadResume()">Download Resume</button>
-      </div>
+<div class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-slate-900">
+  <!-- Single soft glow behind the content; nothing else competing for attention -->
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(8,145,178,0.18),transparent_70%)]"></div>
+
+  <div class="relative z-10 max-w-2xl px-6 py-24 animate-fade-in-up">
+    <p class="flex items-center justify-center gap-2 text-sm font-medium text-brand-light mb-5">
+      <span class="w-2 h-2 rounded-full bg-brand-light"></span>
+      Senior Frontend Developer
+    </p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+      Hi, I'm Kirandeep Kaur
+    </h1>
+    <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
+      I build fast, reliable Angular applications for the financial data domain, from
+      client-facing platforms to the internal tools that keep teams moving.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+      <button
+        class="px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-dark text-white rounded-md cursor-pointer transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-brand/20"
+        (click)="scrollToProjects()"
+      >
+        View My Work
+      </button>
+      <a
+        href="Kirandeep_Kaur_Resume.pdf"
+        download
+        class="px-6 py-3 text-base font-semibold bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-md cursor-pointer transition-all duration-200 hover:-translate-y-0.5"
+      >
+        Download Resume
+      </a>
+    </div>
+
+    <div class="flex justify-center gap-6 text-xl text-slate-400">
+      <a href="https://github.com/Kirandeep1" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-white transition-colors">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/kiran1308/" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-white transition-colors">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:kiran.kaur1099@gmail.com" aria-label="Email" class="hover:text-white transition-colors">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
   </div>
-  
+
+  <a
+    href="#about-me"
+    aria-label="Scroll to About Me section"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors animate-float"
+  >
+    <i class="fas fa-chevron-down text-xl"></i>
+  </a>
+</div>

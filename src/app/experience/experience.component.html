@@ -1,93 +1,38 @@
-<!-- <section id="work-experience" class="pt-10 pb-5 px-40 bg-gray-100 common-gradient">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-           @for (job of employment.jobs; track $index) {
-            <div class="space-y-4">
-              <div class="bg-white p-6 shadow rounded-lg">
-                <div class="flex justify-between items-center">
-                  <h4 class="text-xl font-bold">{{ job.title }}</h4>
-                  <p class="text-sm text-gray-500">{{ job.duration }}</p>
-                </div>
-                <p class="text-gray-600">{{ job.company }}</p>
-                <ul class="mt-2 text-gray-700 list-disc list-inside">
-                    @for (task of job.responsibilities; track $index) {
-                        <li>{{ task }}</li>
-                    }
-                </ul>
+<section id="work-experience" class="bg-slate-50 section-y section-x">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900">Work Experience</h2>
+      <div class="w-16 h-1 bg-brand rounded-full mx-auto mt-3"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto">
+      <div class="absolute left-[9px] top-2 bottom-2 w-px bg-slate-200" aria-hidden="true"></div>
+
+      <div class="space-y-10">
+        @for (role of roles; track role.title) {
+          <div class="relative pl-10">
+            <span class="absolute left-0 top-1.5 w-5 h-5 rounded-full bg-brand/15 border-2 border-brand flex items-center justify-center">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+            </span>
+
+            <div class="bg-white p-6 shadow-sm border border-slate-100 rounded-xl hover:shadow-md transition-shadow duration-300">
+              <div class="flex flex-wrap justify-between items-baseline gap-2 mb-1">
+                <h3 class="text-xl font-semibold text-slate-900">{{ role.title }}</h3>
+                <span class="text-xs font-medium text-brand-dark bg-brand/10 rounded-full px-3 py-1">{{ role.duration }}</span>
               </div>
+              <p class="text-slate-500 font-medium mb-4">{{ role.company }}</p>
+              <ul class="space-y-2">
+                @for (task of role.responsibilities; track $index) {
+                  <li class="flex gap-2 text-slate-600 leading-relaxed">
+                    <i class="fas fa-check text-brand text-xs mt-1.5"></i>
+                    <span>{{ task }}</span>
+                  </li>
+                }
+              </ul>
             </div>
-          } 
-        </div>
-
-        <div>
-
-            @for (internship of employment.internships; track $index) {
-              <div class="space-y-4">
-                  <div class="bg-white p-6 shadow rounded-lg">
-                    <div class="flex justify-between items-center">
-                      <h4 class="text-xl font-bold">{{ internship.title }}</h4>
-                      <p class="text-sm text-gray-500">{{ internship.duration }}</p>
-                    </div>
-                    <p class="text-gray-600">{{ internship.company }}</p>
-                    <ul class="mt-2 text-gray-700 list-disc list-inside">
-                      @for (item of internship.responsibilities; track $index) {
-                          <li>{{ item }}</li>
-                      }
-                    </ul>
-                  </div>
-                </div>
-            }
-  
           </div>
+        }
       </div>
     </div>
-  </section>
-   -->
-
-   <section id="work-experience" class="pt-10 pb-5 px-8 md:px-40 bg-gray-100 common-gradient">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Work Experience</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Employment -->
-        <div>
-          @for (job of employment.jobs; track $index) {
-            <div class="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
-              <div class="flex justify-between items-center mb-2">
-                <h4 class="text-xl font-semibold text-gray-800">{{ job.title }}</h4>
-                <p class="text-sm text-gray-600 italic">{{ job.duration }}</p>
-              </div>
-              <p class="text-gray-700 font-medium">{{ job.company }}</p>
-              <!-- <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
-                @for (task of job.responsibilities; track $index) {
-                  <li class="leading-relaxed">{{ task }}</li>
-                }
-              </ul> -->
-              In my current role, I maintain and enhance various in-house projects, ensuring they meet evolving requirements. I have contributed to upgrading projects to newer versions, modernizing UI frameworks, and improving functionalities in legacy applications. My responsibilities also include integrating analytics, writing unit tests, and ensuring code quality through tools like ESLint, Prettier, and Husky. I have also built internal tools to automate tasks for different teams while gaining familarity in SQL, Docker, and cloud services.
-            </div>
-          }
-        </div>
-  
-        <!-- Internships -->
-        <div>
-          @for (internship of employment.internships; track $index) {
-            <div class="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
-              <div class="flex justify-between items-center mb-2">
-                <h4 class="text-xl font-semibold text-gray-800">{{ internship.title }}</h4>
-                <p class="text-sm text-gray-600 italic">{{ internship.duration }}</p>
-              </div>
-              <p class="text-gray-700 font-medium">{{ internship.company }}</p>
-              <!-- <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
-                @for (item of internship.responsibilities; track $index) {
-                  <li class="leading-relaxed">{{ item }}</li>
-                }
-              </ul> -->
-              During my internship, I initiated a project and collaborated with UI/UX designers to design and implement it from scratch. I also worked on enhancing other projects, utilizing APIs and Postman to fetch and display data. Additionally, I gained hands-on experience with Git, GitHub, Markdown, and writing detailed documentation (README).
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-  </section>
-  
+  </div>
+</section>
